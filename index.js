@@ -18,7 +18,7 @@ function displayPosts(posts) {
 
 async function fetchPosts() {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const response = await fetch('https://mockend.com/mockend/demo/posts');
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`);
     }
@@ -29,3 +29,5 @@ async function fetchPosts() {
     console.error('Failed to fetch posts:', error);
   }
 }
+
+fetchPosts();
